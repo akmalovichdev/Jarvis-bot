@@ -40,28 +40,33 @@ Jarvis Bot - это мощный Telegram бот для управления в�
 ### Пошаговая установка
 
 1. **Клонируйте репозиторий:**
+
    ```bash
    git clone <repository-url>
    cd Jarvis
    ```
 
 2. **Установите зависимости:**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. **Создайте файл конфигурации:**
+
    ```bash
    cp .env.example .env
    ```
 
 4. **Настройте токен бота:**
    Откройте файл `.env` и добавьте ваш токен:
+
    ```
    botToken=YOUR_BOT_TOKEN_HERE
    ```
 
 5. **Установите дополнительные пакеты (для скриншотов):**
+
    ```bash
    sudo apt install scrot
    # или
@@ -69,6 +74,7 @@ Jarvis Bot - это мощный Telegram бот для управления в�
    ```
 
 6. **Запустите бота:**
+
    ```bash
    python main.py
    ```
@@ -155,6 +161,7 @@ sudo usermod -a -G audio $USER
 ### Информация о системе (`/info`)
 
 Подробная информация включает:
+
 - 🖥️ Операционная система
 - 💾 Использование памяти (RAM)
 - 💿 Дисковое пространство
@@ -170,17 +177,21 @@ sudo usermod -a -G audio $USER
 **Ошибка:** `X get_image failed: error 8`
 
 **Решения:**
+
 1. Установите scrot:
+
    ```bash
    sudo apt install scrot
    ```
 
 2. Или установите ImageMagick:
+
    ```bash
    sudo apt install imagemagick
    ```
 
 3. Проверьте доступность методов:
+
    ```bash
    /screenshot_test
    ```
@@ -190,6 +201,7 @@ sudo usermod -a -G audio $USER
 **Ошибка:** `amixer: command not found`
 
 **Решение:**
+
 ```bash
 sudo apt install alsa-utils
 ```
@@ -199,6 +211,7 @@ sudo apt install alsa-utils
 **Ошибка:** `playerctl: command not found`
 
 **Решение:**
+
 ```bash
 sudo apt install playerctl
 ```
@@ -234,6 +247,7 @@ Jarvis/
 ### Добавление новых команд
 
 1. Создайте обработчик команды:
+
    ```python
    @dp.message_handler(commands=["new_command"])
    async def new_command(message: types.Message):
@@ -246,6 +260,7 @@ Jarvis/
 ### Логирование
 
 Бот использует стандартное логирование Python:
+
 ```python
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -276,7 +291,7 @@ logging.basicConfig(level=logging.INFO)
 Если у вас возникли проблемы или вопросы:
 
 - 📧 Создайте Issue в репозитории
-- 💬 Напишите в Telegram: [@your_username]
+- 💬 Напишите в Telegram: [@akmalovichdev]
 - 📖 Изучите документацию выше
 
 ---
